@@ -34,3 +34,20 @@
     filter: drop-shadow(0 0 8px #00e5ff) drop-shadow(0 0 22px rgba(0, 229, 255, 0.9));
   }
 }
+
+/* Add to the bottom of Pot.css */
+
+.pot-glow.pot-letter {
+  /* Bright white core with a soft white glow */
+  filter: drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  animation: pulse-letter 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse-letter {
+  0% {
+    filter: drop-shadow(0 0 2px #ffffff) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #ffffff) drop-shadow(0 0 20px rgba(255, 255, 255, 1));
+  }
+}

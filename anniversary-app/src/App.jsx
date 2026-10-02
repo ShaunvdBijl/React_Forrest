@@ -14,9 +14,14 @@ function App() {
     <div className="app-container">
       <h1 className="header-title">Happy 6 Months</h1>
       
-      <div className="garden-container" style={{ position: 'relative' }}>
-        <Sunflower />
-        <Pot />
+      <div className="flower-gallery">
+        <div className="garden-container"><Snapdragon /><Pot letter="6" /></div>
+        <div className="garden-container"><Marigold /><Pot letter="M"/></div>
+        <div className="garden-container"><Orchid /><Pot letter="O"/></div>
+        <div className="garden-container"><Nasturtium /><Pot letter="N"/></div>
+        <div className="garden-container"><Tulip /><Pot letter="T"/></div>
+        <div className="garden-container"><Hibiscus /><Pot letter="H"/></div>
+        <div className="garden-container"><Sunflower /><Pot letter="S"/></div>
       </div>
     </div>
   );

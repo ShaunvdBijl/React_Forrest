@@ -1,6 +1,7 @@
-import './Pot.css';
+import React from 'react';
+import './Pot.css'; 
 
-const Pot = () => {
+const Pot = ({ letter }) => {
   return (
     <div className="pot-container">
       <svg 
@@ -11,15 +12,15 @@ const Pot = () => {
         xmlns="http://www.w3.org/2000/svg"
         className="neon-pot"
       >
-        {/* Pot Body - The main base that tapers downwards */}
+        {/* Pot Body */}
         <path 
           d="M 35 30 L 45 110 Q 75 125 105 110 L 115 30" 
-          stroke="#00e5ff" /* A bright cyan neon color */
+          stroke="#00e5ff" 
           strokeWidth="4" 
           className="pot-glow main-line" 
         />
         
-        {/* Pot Rim - The top edge of the pot */}
+        {/* Pot Rim */}
         <rect 
           x="25" 
           y="10" 
@@ -31,7 +32,7 @@ const Pot = () => {
           className="pot-glow main-line" 
         />
         
-        {/* Inner dirt/depth line - Gives the illusion of the pot opening */}
+        {/* Inner dirt/depth line */}
         <ellipse 
           cx="75" 
           y="20" 
@@ -42,6 +43,22 @@ const Pot = () => {
           strokeDasharray="4 4" 
           className="pot-glow detail-line" 
         />
+
+        {/* The Glowing Letter */}
+        {letter && (
+          <text 
+            x="75" 
+            y="90" 
+            textAnchor="middle" 
+            fill="#ffffff" 
+            className="pot-glow pot-letter"
+            fontSize="42"
+            fontFamily="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+            fontWeight="bold"
+          >
+            {letter}
+          </text>
+        )}
       </svg>
     </div>
   );
