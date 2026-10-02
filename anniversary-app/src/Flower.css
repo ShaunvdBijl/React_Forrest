@@ -91,3 +91,18 @@
   0% { filter: drop-shadow(0 0 3px #b026ff) drop-shadow(0 0 10px rgba(176, 38, 255, 0.5)); }
   100% { filter: drop-shadow(0 0 8px #b026ff) drop-shadow(0 0 25px rgba(176, 38, 255, 0.9)); }
 }
+/* Red-Orange Nasturtium Bloom Glow */
+.flower-glow.nasturtium-bloom {
+  filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 15px rgba(255, 51, 0, 0.7));
+  animation: pulse-red-orange 2.6s infinite alternate ease-in-out;
+}
+
+.nasturtium-center {
+  filter: drop-shadow(0 0 4px #ffdd00);
+}
+
+/* Breathing light effect for Red-Orange */
+@keyframes pulse-red-orange {
+  0% { filter: drop-shadow(0 0 3px #ff3300) drop-shadow(0 0 10px rgba(255, 51, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff3300) drop-shadow(0 0 25px rgba(255, 51, 0, 0.9)); }
+}
