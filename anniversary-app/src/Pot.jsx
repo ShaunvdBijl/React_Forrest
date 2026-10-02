@@ -1,4 +1,3 @@
-import React from 'react';
 import './Pot.css'; 
 
 const Pot = ({ letter }) => {
