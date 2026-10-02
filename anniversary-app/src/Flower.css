@@ -118,3 +118,20 @@
   0% { filter: drop-shadow(0 0 3px #ffea00) drop-shadow(0 0 10px rgba(255, 234, 0, 0.5)); }
   100% { filter: drop-shadow(0 0 8px #ffea00) drop-shadow(0 0 25px rgba(255, 234, 0, 0.9)); }
 }
+
+/* Rose-Pink Hibiscus Bloom Glow */
+.flower-glow.hibiscus-bloom {
+  filter: drop-shadow(0 0 5px #ff007f) drop-shadow(0 0 15px rgba(255, 0, 127, 0.7));
+  animation: pulse-rose 2.7s infinite alternate ease-in-out;
+}
+
+/* Yellow/Red Stamen Glow */
+.flower-glow.hibiscus-stamen {
+  filter: drop-shadow(0 0 4px #ffea00) drop-shadow(0 0 10px rgba(255, 51, 0, 0.8));
+}
+
+/* Breathing light effect for Rose Pink */
+@keyframes pulse-rose {
+  0% { filter: drop-shadow(0 0 3px #ff007f) drop-shadow(0 0 10px rgba(255, 0, 127, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff007f) drop-shadow(0 0 25px rgba(255, 0, 127, 0.9)); }
+}
