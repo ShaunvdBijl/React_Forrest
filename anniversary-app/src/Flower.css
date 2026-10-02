@@ -106,3 +106,15 @@
   0% { filter: drop-shadow(0 0 3px #ff3300) drop-shadow(0 0 10px rgba(255, 51, 0, 0.5)); }
   100% { filter: drop-shadow(0 0 8px #ff3300) drop-shadow(0 0 25px rgba(255, 51, 0, 0.9)); }
 }
+
+/* Yellow Tulip Bloom Glow */
+.flower-glow.tulip-bloom {
+  filter: drop-shadow(0 0 5px #ffea00) drop-shadow(0 0 15px rgba(255, 234, 0, 0.7));
+  animation: pulse-yellow-tulip 2.4s infinite alternate ease-in-out;
+}
+
+/* Breathing light effect for Yellow Tulip */
+@keyframes pulse-yellow-tulip {
+  0% { filter: drop-shadow(0 0 3px #ffea00) drop-shadow(0 0 10px rgba(255, 234, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ffea00) drop-shadow(0 0 25px rgba(255, 234, 0, 0.9)); }
+}
