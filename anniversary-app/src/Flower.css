@@ -3,24 +3,24 @@
   /* Positions the bottom of the flower just inside the rim of the pot */
   bottom: 100px; 
   left: 50%;
-  transform: translateX(-50%);
+  
+  /* Use combined transform for production build compatibility */
+  transform: translateX(-50%) scale(0);
   
   /* z-index 5 puts it BEHIND the pot (which is z-index 10) */
   z-index: 5; 
   
   /* The Growth Animation */
   transform-origin: bottom center;
-  /* Starts at scale 0, springs up to scale 1 over 2 seconds */
   animation: growUpward 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  scale: 0; 
 }
 
 @keyframes growUpward {
   0% {
-    scale: 0;
+    transform: translateX(-50%) scale(0);
   }
   100% {
-    scale: 1;
+    transform: translateX(-50%) scale(1);
   }
 }
 
