@@ -52,3 +52,26 @@
   0% { filter: drop-shadow(0 0 3px #ff00ff) drop-shadow(0 0 10px rgba(255, 0, 255, 0.5)); }
   100% { filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 25px rgba(255, 0, 255, 0.9)); }
 }
+
+/* Orange Marigold Bloom Glow */
+.flower-glow.marigold-bloom {
+  filter: drop-shadow(0 0 5px #ff8800) drop-shadow(0 0 15px rgba(255, 136, 0, 0.7));
+  animation: pulse-orange 2.5s infinite alternate ease-in-out;
+}
+
+/* Yellow Marigold Center Glow */
+.flower-glow.marigold-center {
+  filter: drop-shadow(0 0 5px #ffdd00) drop-shadow(0 0 15px rgba(255, 221, 0, 0.7));
+  animation: pulse-yellow 2.3s infinite alternate ease-in-out;
+}
+
+/* Breathing light effects for Marigold */
+@keyframes pulse-orange {
+  0% { filter: drop-shadow(0 0 3px #ff8800) drop-shadow(0 0 10px rgba(255, 136, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff8800) drop-shadow(0 0 25px rgba(255, 136, 0, 0.9)); }
+}
+
+@keyframes pulse-yellow {
+  0% { filter: drop-shadow(0 0 3px #ffdd00) drop-shadow(0 0 10px rgba(255, 221, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ffdd00) drop-shadow(0 0 25px rgba(255, 221, 0, 0.9)); }
+}
