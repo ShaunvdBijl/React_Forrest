@@ -75,3 +75,19 @@
   0% { filter: drop-shadow(0 0 3px #ffdd00) drop-shadow(0 0 10px rgba(255, 221, 0, 0.5)); }
   100% { filter: drop-shadow(0 0 8px #ffdd00) drop-shadow(0 0 25px rgba(255, 221, 0, 0.9)); }
 }
+
+/* Purple Orchid Bloom Glow */
+.flower-glow.orchid-bloom {
+  filter: drop-shadow(0 0 5px #b026ff) drop-shadow(0 0 15px rgba(176, 38, 255, 0.7));
+  animation: pulse-purple 2.8s infinite alternate ease-in-out;
+}
+
+.orchid-center {
+  filter: drop-shadow(0 0 4px #ffdd00);
+}
+
+/* Breathing light effect for Purple */
+@keyframes pulse-purple {
+  0% { filter: drop-shadow(0 0 3px #b026ff) drop-shadow(0 0 10px rgba(176, 38, 255, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #b026ff) drop-shadow(0 0 25px rgba(176, 38, 255, 0.9)); }
+}
