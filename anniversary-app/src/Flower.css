@@ -1,0 +1,160 @@
+.flower-container {
+  position: absolute;
+  /* Positions the bottom of the flower just inside the rim of the pot */
+  bottom: 100px; 
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* z-index 5 puts it BEHIND the pot (which is z-index 10) */
+  z-index: 5; 
+  
+  /* The Growth Animation */
+  transform-origin: bottom center;
+  /* Starts at scale 0, springs up to scale 1 over 2 seconds */
+  animation: growUpward 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  scale: 0; 
+}
+
+@keyframes growUpward {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.neon-flower {
+  overflow: visible;
+}
+
+/* Green Stem/Leaf Glow */
+.flower-glow.stem, .flower-glow.leaf {
+  filter: drop-shadow(0 0 4px #39ff14) drop-shadow(0 0 12px rgba(57, 255, 20, 0.6));
+  animation: pulse-green 3s infinite alternate ease-in-out;
+}
+
+/* Pink Bloom Glow */
+.flower-glow.bloom {
+  filter: drop-shadow(0 0 5px #ff00ff) drop-shadow(0 0 15px rgba(255, 0, 255, 0.7));
+  animation: pulse-pink 2.5s infinite alternate ease-in-out;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Breathing light effects */
+@keyframes pulse-green {
+  0% { filter: drop-shadow(0 0 2px #39ff14) drop-shadow(0 0 8px rgba(57, 255, 20, 0.4)); }
+  100% { filter: drop-shadow(0 0 6px #39ff14) drop-shadow(0 0 18px rgba(57, 255, 20, 0.8)); }
+}
+
+@keyframes pulse-pink {
+  0% { filter: drop-shadow(0 0 3px #ff00ff) drop-shadow(0 0 10px rgba(255, 0, 255, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 25px rgba(255, 0, 255, 0.9)); }
+}
+
+/* Orange Marigold Bloom Glow */
+.flower-glow.marigold-bloom {
+  filter: drop-shadow(0 0 5px #ff8800) drop-shadow(0 0 15px rgba(255, 136, 0, 0.7));
+  animation: pulse-orange 2.5s infinite alternate ease-in-out;
+}
+
+/* Yellow Marigold Center Glow */
+.flower-glow.marigold-center {
+  filter: drop-shadow(0 0 5px #ffdd00) drop-shadow(0 0 15px rgba(255, 221, 0, 0.7));
+  animation: pulse-yellow 2.3s infinite alternate ease-in-out;
+}
+
+/* Breathing light effects for Marigold */
+@keyframes pulse-orange {
+  0% { filter: drop-shadow(0 0 3px #ff8800) drop-shadow(0 0 10px rgba(255, 136, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff8800) drop-shadow(0 0 25px rgba(255, 136, 0, 0.9)); }
+}
+
+@keyframes pulse-yellow {
+  0% { filter: drop-shadow(0 0 3px #ffdd00) drop-shadow(0 0 10px rgba(255, 221, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ffdd00) drop-shadow(0 0 25px rgba(255, 221, 0, 0.9)); }
+}
+
+/* Purple Orchid Bloom Glow */
+.flower-glow.orchid-bloom {
+  filter: drop-shadow(0 0 5px #b026ff) drop-shadow(0 0 15px rgba(176, 38, 255, 0.7));
+  animation: pulse-purple 2.8s infinite alternate ease-in-out;
+}
+
+.orchid-center {
+  filter: drop-shadow(0 0 4px #ffdd00);
+}
+
+/* Breathing light effect for Purple */
+@keyframes pulse-purple {
+  0% { filter: drop-shadow(0 0 3px #b026ff) drop-shadow(0 0 10px rgba(176, 38, 255, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #b026ff) drop-shadow(0 0 25px rgba(176, 38, 255, 0.9)); }
+}
+/* Red-Orange Nasturtium Bloom Glow */
+.flower-glow.nasturtium-bloom {
+  filter: drop-shadow(0 0 5px #ff3300) drop-shadow(0 0 15px rgba(255, 51, 0, 0.7));
+  animation: pulse-red-orange 2.6s infinite alternate ease-in-out;
+}
+
+.nasturtium-center {
+  filter: drop-shadow(0 0 4px #ffdd00);
+}
+
+/* Breathing light effect for Red-Orange */
+@keyframes pulse-red-orange {
+  0% { filter: drop-shadow(0 0 3px #ff3300) drop-shadow(0 0 10px rgba(255, 51, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff3300) drop-shadow(0 0 25px rgba(255, 51, 0, 0.9)); }
+}
+
+/* Yellow Tulip Bloom Glow */
+.flower-glow.tulip-bloom {
+  filter: drop-shadow(0 0 5px #ffea00) drop-shadow(0 0 15px rgba(255, 234, 0, 0.7));
+  animation: pulse-yellow-tulip 2.4s infinite alternate ease-in-out;
+}
+
+/* Breathing light effect for Yellow Tulip */
+@keyframes pulse-yellow-tulip {
+  0% { filter: drop-shadow(0 0 3px #ffea00) drop-shadow(0 0 10px rgba(255, 234, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ffea00) drop-shadow(0 0 25px rgba(255, 234, 0, 0.9)); }
+}
+
+/* Rose-Pink Hibiscus Bloom Glow */
+.flower-glow.hibiscus-bloom {
+  filter: drop-shadow(0 0 5px #ff007f) drop-shadow(0 0 15px rgba(255, 0, 127, 0.7));
+  animation: pulse-rose 2.7s infinite alternate ease-in-out;
+}
+
+/* Yellow/Red Stamen Glow */
+.flower-glow.hibiscus-stamen {
+  filter: drop-shadow(0 0 4px #ffea00) drop-shadow(0 0 10px rgba(255, 51, 0, 0.8));
+}
+
+/* Breathing light effect for Rose Pink */
+@keyframes pulse-rose {
+  0% { filter: drop-shadow(0 0 3px #ff007f) drop-shadow(0 0 10px rgba(255, 0, 127, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ff007f) drop-shadow(0 0 25px rgba(255, 0, 127, 0.9)); }
+}
+
+/* Neon Yellow/Gold Sunflower Petals Glow */
+.flower-glow.sunflower-bloom {
+  filter: drop-shadow(0 0 5px #ffea00) drop-shadow(0 0 15px rgba(255, 234, 0, 0.7));
+  animation: pulse-sunflower 3s infinite alternate ease-in-out;
+}
+
+/* Deep Orange Seed Center Glow */
+.flower-glow.sunflower-center {
+  filter: drop-shadow(0 0 4px #ff6600) drop-shadow(0 0 12px rgba(255, 102, 0, 0.8));
+  animation: pulse-orange-center 2.5s infinite alternate ease-in-out;
+}
+
+/* Breathing light effects */
+@keyframes pulse-sunflower {
+  0% { filter: drop-shadow(0 0 3px #ffea00) drop-shadow(0 0 12px rgba(255, 234, 0, 0.5)); }
+  100% { filter: drop-shadow(0 0 8px #ffea00) drop-shadow(0 0 25px rgba(255, 234, 0, 0.9)); }
+}
+
+@keyframes pulse-orange-center {
+  0% { filter: drop-shadow(0 0 2px #ff6600) drop-shadow(0 0 8px rgba(255, 102, 0, 0.4)); }
+  100% { filter: drop-shadow(0 0 6px #ff6600) drop-shadow(0 0 18px rgba(255, 102, 0, 0.9)); }
+}
