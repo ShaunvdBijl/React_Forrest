@@ -30,9 +30,21 @@ body, html {
 }
 
 .garden-container {
-  flex-grow: 1;
+  position: relative;
+  width: 150px; 
+  height: 350px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 10vh; /* Keeps the pot anchored near the bottom */
+}
+
+.flower-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
 }
